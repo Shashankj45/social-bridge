@@ -1,0 +1,100 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-happy: #FFD93D;
+  --color-sad: #6C9BCF;
+  --color-angry: #FF6B6B;
+  --color-scared: #9B59B6;
+  --color-surprised: #FF8C42;
+  --color-calm: #98D8AA;
+  --color-confused: #C4B7CB;
+  --color-excited: #FF69B4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Autism-friendly focus states */
+*:focus {
+  outline: 4px solid #38bdf8;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Reduce motion for those who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Custom scrollbar - calming colors */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e0f2fe;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #38bdf8, #818cf8);
+  border-radius: 10px;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Emotion colors */
+.emotion-happy { background: linear-gradient(135deg, #FFD93D, #FFA500); }
+.emotion-sad { background: linear-gradient(135deg, #6C9BCF, #4A7EB5); }
+.emotion-angry { background: linear-gradient(135deg, #FF6B6B, #E74C3C); }
+.emotion-scared { background: linear-gradient(135deg, #9B59B6, #8E44AD); }
+.emotion-surprised { background: linear-gradient(135deg, #FF8C42, #FF6B35); }
+.emotion-calm { background: linear-gradient(135deg, #98D8AA, #7BC89C); }
+.emotion-confused { background: linear-gradient(135deg, #C4B7CB, #A89BB2); }
+.emotion-excited { background: linear-gradient(135deg, #FF69B4, #FF1493); }
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Progress bars */
+.progress-bar {
+  height: 20px;
+  border-radius: 10px;
+  background: #e0e0e0;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
